@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+:root {
+   --hero-footer: #1f2037;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+/* General styling */
+
+body {
+   background-color: #eee;
+   font-family: "Montserrat", sans-serif;
+   font-size: 62.5%;
+}
+
+header {
+   height: 400px;
+   background-color: var(--hero-footer);
+   padding: 20px 20px;
+}
+
+/* Header */
+
+.mainHeader {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.mainHeader li {
+   list-style-type: none;
+}
+.mainHeader a {
+   text-decoration: none;
+}
+.mainHeader h1,
+li,
+a {
+   color: whitesmoke;
+}
+
+ul {
+   display: flex;
+}
+
+ul li {
+   margin-left: 10px;
+   font-size: 0.8rem;
+}
+
+.mainHeader h1 {
+   font-size: 1.5rem;
+}
+
+/* Header Section */
+
+.headerSection {
+   width: 80%;
+   margin: 80px auto;
+   display: flex;
+   justify-content: space-around;
+}
+
+.image {
+   flex-basis: 50%;
+   display: flex;
+   justify-content: end;
+   overflow: hidden;
+}
+.text {
+   flex-basis: 50%;
+}
+
+.headerSection img {
+   height: 150px;
+   width: 300px;
+   background-color: lightgrey;
+}
+
+.headerSection h1,
+p {
+   color: whitesmoke;
+}
+
+.headerSection h1 {
+   font-size: 2rem;
+   line-height: 0.9;
+   margin-bottom: 15px;
+}
+
+.headerSection p {
+   font-size: 0.8rem;
+   line-height: 1.5;
+   margin-bottom: 1rem;
+}
+
+.headerSection button {
+   background-color: #3882f6;
+   color: whitesmoke;
+   padding: 8px 15px;
+   border: none;
+   border-radius: 10px;
+}
