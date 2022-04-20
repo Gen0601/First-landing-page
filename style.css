@@ -2,6 +2,9 @@
 
 :root {
    --hero-footer: #1f2037;
+   --quote-section: #e5e7eb;
+   --quote-text: #1f2937;
+   --button-etc: #3882f6;
 }
 * {
    margin: 0;
@@ -17,7 +20,7 @@ body {
 }
 
 header {
-   height: 400px;
+   height: 60%;
    background-color: var(--hero-footer);
    padding: 20px 20px;
 }
@@ -46,7 +49,7 @@ ul {
 }
 
 ul li {
-   margin-left: 10px;
+   margin-left: 30px;
    font-size: 0.8rem;
 }
 
@@ -60,22 +63,21 @@ ul li {
    width: 80%;
    margin: 80px auto;
    display: flex;
-   justify-content: space-around;
+   justify-content: center;
+   gap: 2rem;
 }
 
 .image {
    flex-basis: 50%;
    display: flex;
-   justify-content: end;
-   overflow: hidden;
+   justify-content: center;
 }
 .text {
    flex-basis: 50%;
 }
 
 .headerSection img {
-   height: 150px;
-   width: 300px;
+   width: 100%;
    background-color: lightgrey;
 }
 
@@ -85,21 +87,217 @@ p {
 }
 
 .headerSection h1 {
-   font-size: 2rem;
+   font-size: 3rem;
    line-height: 0.9;
    margin-bottom: 15px;
 }
 
 .headerSection p {
-   font-size: 0.8rem;
+   font-size: 1.2rem;
    line-height: 1.5;
    margin-bottom: 1rem;
 }
 
 .headerSection button {
-   background-color: #3882f6;
+   background-color: var(--button-etc);
    color: whitesmoke;
    padding: 8px 15px;
    border: none;
    border-radius: 10px;
+}
+
+@media only screen and (max-width: 425px) {
+   .image {
+      display: none;
+   }
+   .headerSection h1,
+   p {
+      line-height: 1.3;
+      text-align: center;
+   }
+   .headerSection .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+   }
+   .headerSection h1 {
+      text-transform: uppercase;
+   }
+}
+/* Mid content */
+
+.midContent {
+   height: auto;
+   width: 100%;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(./images/qingbao-meng-01_igFr7hd4-unsplash.jpg),
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   padding-bottom: 2rem;
+}
+
+.header h1 {
+   color: whitesmoke;
+   font-size: 2rem;
+   margin-top: 30px;
+}
+
+.boxes {
+   display: flex;
+   gap: 9rem;
+   margin-top: 20px;
+   width: 80%;
+   justify-content: center;
+}
+
+.box {
+   height: 150px;
+   width: 150px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.box1,
+.box2,
+.box3,
+.box4 {
+   border: 2px grey solid;
+   height: 100%;
+   width: 100%;
+   border-radius: 9px;
+   margin-bottom: 8px;
+}
+
+.box p {
+   font-size: 0.8rem;
+   text-align: center;
+   line-height: 1.3;
+   width: min(100%, 100%);
+}
+
+@media only screen and (max-width: 425px) {
+   .boxes {
+      flex-direction: column;
+      gap: 2rem;
+   }
+   .header {
+      text-align: center;
+   }
+   .box {
+      width: 80%;
+      margin-inline: auto;
+   }
+}
+
+/* Grey Background */
+
+.quote {
+   width: 100%;
+   background-color: var(--quote-section);
+}
+
+.quoteContainer {
+   width: 80%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+   background: var(--quote-section);
+   padding: 2rem 0;
+}
+
+.quoteContainer > blockquote {
+   font-size: 1.5rem;
+   color: var(--quote-text);
+   width: 50%;
+   line-height: 1.5;
+   margin-bottom: 2rem;
+   background: var(--quote-section);
+   font-style: italic;
+   padding: 2rem 0px;
+}
+
+.quoteContainer p {
+   font-size: 1rem;
+   font-weight: bold;
+   width: 50%;
+   color: black;
+   margin-top: -3rem;
+}
+
+@media only screen and (max-width: 425px) {
+   .quoteContainer blockquote {
+      width: 100%;
+   }
+   .quoteContainer p {
+      align-self: center;
+      width: 100%;
+   }
+}
+
+/* Call to action Section */
+
+.ctn {
+   height: 10rem;
+}
+
+.ctn .ctnContainer {
+   background-color: var(--button-etc);
+   width: 50%;
+   margin: 5rem auto;
+   padding: 2rem 5rem;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.ctnContainer h1 {
+   color: whitesmoke;
+   font-size: 2rem;
+}
+
+.ctnContainer p {
+   margin-top: 3px;
+   color: whitesmoke;
+}
+
+.ctnContainer button {
+   padding: 1rem 2rem;
+   border: 2px white solid;
+   border-radius: 10px;
+   color: whitesmoke;
+   font-weight: bold;
+   background-color: var(--button-etc);
+}
+
+.ctn a {
+   text-decoration: none;
+}
+
+@media only screen and (max-width: 425px) {
+   .ctn .ctnContainer {
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0rem 3rem 1rem 3rem;
+   }
+
+   .ctnContainer button,
+   p,
+   h1 {
+      margin-top: 1rem;
+      text-align: center;
+   }
+   .ctnContainer button {
+      padding: 5px 10px;
+   }
 }
