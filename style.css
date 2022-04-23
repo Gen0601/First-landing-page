@@ -88,9 +88,16 @@ p {
 }
 
 .headerSection h1 {
-   font-size: 3rem;
+   font-size: 4rem;
    line-height: 0.9;
    margin-bottom: 15px;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(./images/qingbao-meng-01_igFr7hd4-unsplash.jpg),
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+   background-position: top right;
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent;
 }
 
 .headerSection p {
