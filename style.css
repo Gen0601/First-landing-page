@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-
+html {
+   scroll-behavior: smooth;
+}
 :root {
    --hero-footer: #1f2037;
    --quote-section: #e5e7eb;
